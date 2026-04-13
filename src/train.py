@@ -4,6 +4,8 @@ import mlflow
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+
 @mlflow.trace
 def load_data():
     df = pd.read_csv("data/processed/processed.csv")

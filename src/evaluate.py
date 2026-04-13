@@ -3,6 +3,8 @@ import joblib
 import mlflow
 from sklearn.metrics import f1_score, roc_auc_score
 
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+
 @mlflow.trace
 def load_artifacts():
     df = pd.read_csv("data/processed/processed.csv")
