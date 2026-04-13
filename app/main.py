@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import joblib
+import mlflow
 
 app = FastAPI()
 
@@ -10,6 +11,7 @@ def home():
     return {"message": "Churn Prediction API Running"}
 
 @app.post("/predict")
+@mlflow.trace
 def predict(data: dict):
     features = list(data.values())
     prediction = model.predict([features])

@@ -1,0 +1,5 @@
+ticket_7d,ticket_30d,ticket_90d,sentiment,category_count,time_gap,charge_change,churn
+2,5,10,0.5,3,2,10,0
+5,12,20,-0.2,5,1,20,1
+3,8,15,0.1,2,3,5,0
+6,15,25,-0.5,6,1,25,1
